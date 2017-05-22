@@ -94,7 +94,8 @@ function set_environment_variables {
 		shift # past argument or value
 	done
 
-	PHPCS_PHAR_URL=https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+	#PHPCS_PHAR_URL=https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+	PHPCS_PHAR_URL=https://github.com/squizlabs/PHP_CodeSniffer/releases/download/2.9.0/phpcs.phar
 	PHPCS_RULESET_FILE=$( upsearch phpcs.ruleset.xml )
 	PHPCS_IGNORE=${PHPCS_IGNORE:-'vendor/*'}
 	PHPCS_GIT_TREE=${PHPCS_GIT_TREE:-master}
