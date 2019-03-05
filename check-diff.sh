@@ -348,7 +348,7 @@ function download {
 	if command -v curl >/dev/null 2>&1; then
 		curl $(verbose_arg) -L -s "$1" > "$2"
 	elif command -v wget >/dev/null 2>&1; then
-		wget $(verbose_arg) -n -O "$2" "$1"
+		wget $(verbose_arg) -O "$2" "$1"
 	else
 		echo ''
 		return 1
